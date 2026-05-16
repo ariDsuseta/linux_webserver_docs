@@ -29,6 +29,8 @@ Penting untuk mengelola *source code* website di direktori web (misal: `/var/www
 | :--- | :--- | :--- |
 | `cd <direktori>` | Berpindah folder/direktori | `cd /var/www/html/` |
 | `ls -la` | Melihat daftar file & folder secara detail | `ls -la` |
+| `cp -r <sumber> <tujuan>` | Menyalin (*copy*) folder beserta seluruh isinya | `sudo cp -r /var/www/html/web1 /var/www/html/web1_backup` |
+| `cp -a <sumber> <tujuan>` | Menyalin folder beserta isinya *dan* mempertahankan hak akses (sangat disarankan untuk web server) | `sudo cp -a /var/www/html/web1 /var/www/html/web1_backup` |
 | `chown -R user:group <path>` | Mengubah kepemilikan file/folder | `sudo chown -R www-data:www-data /var/www/html` |
 | `chmod <mode> <path>` | Mengubah hak akses (*read, write, execute*) | `sudo chmod 755 /var/www/html` |
 | `nano <file>` | Mengedit file teks langsung di terminal | `sudo nano /etc/nginx/sites-available/default` |
